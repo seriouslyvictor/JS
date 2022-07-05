@@ -38,3 +38,10 @@ bmiTiburcioMaior = bmiTiburcio > bmiPablo;
 
 console.log('Bmi do Tibúrcio é maior? ' +bmiTiburcioMaior);
 console.log('Fim do teste com os segundos dados.');
+
+if (bmiTiburcioMaior) {
+    console.log(`O BMI(${bmiTiburcio}) de Tibúrcio é maior do que o de Pablo`)
+} else {
+    console.log(`O BMI(${bmiPablo .toFixed(1)}) de Pablo é maior do que o de Tibúrcio`)
+}
+

@@ -1,36 +1,9 @@
-/* Criando as primeiras Variáveis */
+let h1 = document.querySelector(".principal")
+console.log(h1)
+let textoH1 = document.querySelector(".principal").textContent
 
-const pais = 'Brasil';
-const continente = 'América do Sul';
-let populacao = 210000000;
+h1.addEventListener('click', mudarTexto)
 
-console.log(pais, continente, populacao)
-
-/* Declarações de Variaveis e tipos de dados */
-
-const ilha = false;
-const idioma = 'Português';
-
-console.log(ilha, populacao, pais, idioma)
-
-/*Operadores Matemáticos */
-
-populacao = populacao / 2;
-console.log(populacao);
-
-populacao++;
-console.log(populacao);
-
-/* Operadores Booleanos */
-
-populacao = 210000000
-console.log (populacao > 6000000);
-console.log (populacao >= 33000000);
-
-let descricao =  pais + ' está no continente ' + continente + ' e sua população de ' + populacao + ' de pessoas fala ' + idioma
-
-console.log(descricao);
-
-/* Template Strings */
-
-descricao = `${pais} está no continente ${continente} e a sua população é de ${populacao} pessoas, o idioma oficial é o ${idioma}`;
+function mudarTexto () {
+    textoH1 = 'Sim!!'
+}
