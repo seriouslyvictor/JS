@@ -186,26 +186,62 @@ if (idade2 = 28) console.log(`Você tem exatamente 18 anos de idade!`)
 || = OU
 ! = NÃO */
 
-const ppd = true;
-const visao = false;
+// const ppd = true;
+// const visao = false;
 
-console.log(ppd && visao);
-console.log(ppd || visao);
-console.log(!ppd);
+// console.log(ppd && visao);
+// console.log(ppd || visao);
+// console.log(!ppd);
 
 
-let podeDirigir = (ppd && visao); 
-if (podeDirigir) {
-    console.log("Você está apto para dirigir.")
-} else {
-    console.log("Melhor deixar outra pessoa conduzir....")
+// let podeDirigir = (ppd && visao); 
+// if (podeDirigir) {
+//     console.log("Você está apto para dirigir.")
+// } else {
+//     console.log("Melhor deixar outra pessoa conduzir....")
+// }
+
+// const bebado = false;
+
+// podeDirigir = (ppd && !bebado);
+// if (podeDirigir) {
+//     console.log("Você está apto para dirigir.")
+// } else {
+//     console.log("Melhor deixar outra pessoa conduzir....")
+// }
+
+//  Switch: uma outra maneira de chegar uma variável frente vários valores, muito mais limpo e prático do que else ifs em alguns casos.
+
+// Exemplo - informar o horoscopo da pessoa com base no Signo
+
+let signo = 'Virgo';
+
+switch (signo) {
+    case 'Áries':
+        console.log('Muita sorte no amor e no trabalho')
+        break;
+    case 'Virgo':
+        console.log('Muito azar no amor e no trabalho')
+        break;
+    case 'Libra':
+    case 'Touro':
+        console.log('Falsidade está no seu sangue!')
+        break;
+    default:
+        console.log('Este Signo não existe!')
 }
 
-const bebado = false;
+if (signo === `Virgo`) {
+    console.log('Muito azar no amor e no trabalho')
+} else if (signo === `Libra` || signo === 'Touro')
+    console.log('alsidade está no seu sangue');
 
-podeDirigir = (ppd && !bebado);
-if (podeDirigir) {
-    console.log("Você está apto para dirigir.")
-} else {
-    console.log("Melhor deixar outra pessoa conduzir....")
-}
+// Operador Condicional ou Ternário
+// Essencialmente uma maneira mais simples e limpa de realizar um if else sem muitas condições, operador ? e :
+
+let idadeBeber = 15;
+const beber = idadeBeber >= 18 ? 'Cerveja 🍺' : 'Água 🥛';
+
+// O Operador Ternário pode também ser inserido dentro de Template Strings, ao contrário do iF Else. Observe:
+
+console.log(`Eu gostaria de tomar uma ${idadeBeber >= 18 ? `Cerveja 🍺` : `Água 🥛`}`)
