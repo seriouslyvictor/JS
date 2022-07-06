@@ -1,9 +1,9 @@
-let h1 = document.querySelector(".principal")
-console.log(h1)
-let textoH1 = document.querySelector(".principal").textContent
+let h1 = document.querySelector('.js');
+console.log(h1);
+// let textoH1 = document.querySelector(".js").textContent()
 
 h1.addEventListener('click', mudarTexto)
 
 function mudarTexto () {
-    textoH1 = 'Sim!!'
+    h1.textContent = 'Sim!!'
 }
