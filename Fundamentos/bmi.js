@@ -44,4 +44,3 @@ if (bmiTiburcioMaior) {
 } else {
     console.log(`O BMI(${bmiPablo .toFixed(1)}) de Pablo é maior do que o de Tibúrcio`)
 }
-
