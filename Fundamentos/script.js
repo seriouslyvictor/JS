@@ -106,6 +106,8 @@ console.log (populacao);
 // // if (idadeVictor >= 18) alert('Usuário é maior de idade');
 // console.log(anoAtual - 1991 > anoAtual - 2018);
 
+
+
 // Type Conversion: Algumas vezes será necessário converter Strings em números, para tal finalidade podemos usar o Type Conversion EXPLICITO:
 
 const nascimento = Number('1991')
