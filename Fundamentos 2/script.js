@@ -44,7 +44,7 @@ const idade2 = calcularIdade2(1987);
 console.log(`Resultado da função(Declaração) ${idade}`);
 console.log(`Resultado da função(Expressão) ${idade2}`);
 
-// Arrow Function - um novo tipo de função adicionar no ES6;
+// Arrow Function - um novo tipo de função adicionado no ES6;
 
 
 const calcularIdade3 = nascimento => 2022 - nascimento;
@@ -52,3 +52,27 @@ const calcularIdade3 = nascimento => 2022 - nascimento;
 let idade3 =  calcularIdade3(1987);
 console.log(`Resultado da função(Arrow) ${idade3}`);
 
+const calcAposentadoria = (nascimento, primeiroNome) => {
+    const idade4 = 2022 - nascimento;
+    const retirar = 65 - idade4;
+    return `${primeiroNome} irá se aposentar em ${retirar} anos`
+}
+
+console.log(calcAposentadoria(1987, 'Victor'));
+
+// Esse forma de escrever funções é mais rápida, porém tem implicações que ainda não sei, então não posso usar o tempo todo.
+
+function cortarFrutas(fruta) {
+    return fruta *4;
+    
+}
+
+function juicer(apples, oranges) {
+    const pedacosFruta1 = cortarFrutas(apples);
+    const pedacosFruta2 = cortarFrutas(oranges);
+    console.log(apples, oranges);
+    const juice = `Suco com apples ${pedacosFruta1} e  oranges ${pedacosFruta2}`;
+    return juice;
+}
+
+console.log(juicer(4,2));
