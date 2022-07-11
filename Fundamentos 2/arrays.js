@@ -27,3 +27,4 @@ function calculaIdade(nascimento) {
 
 const idades = [calculaIdade(anos[0]), calculaIdade(anos[1]), calculaIdade(anos[2]), calculaIdade(anos[anos.length - 1])]
 console.log(idades);
+
