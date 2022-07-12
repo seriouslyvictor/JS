@@ -1,6 +1,6 @@
 'use strict'
 
-let numeroSecreto = Math.trunc(Math.random()*20);
+let numeroSecreto = Math.trunc(Math.random()*20)+1;
 let score = 20;
 let highScore = 0
 console.log(numeroSecreto)
@@ -33,8 +33,9 @@ function verificarAcerto() {
 }
 
 function resetaJogo() {
+    document.querySelector('body').style = 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);'
     score = 20;
-    numeroSecreto = Math.trunc(Math.random()*20);
+    numeroSecreto = Math.trunc(Math.random()*20)+1;
     document.querySelector('.status').textContent =  `Tente a sorte 😁`
     document.querySelector('.pontuacao').textContent = `Pontuação: ${score}`
     document.querySelector('.tentativa').value = '';
