@@ -4,10 +4,10 @@ const total = []
 const arr = []
 
 let calcularGorjeta = function (valor) {
-    if (valor >= 70 && valor <= 200) {
-        const tip = Math.round(valor*0.15);
+    if (valor >= 50 && valor <= 300) {
+        const tip = valor*0.15;
         return tip;
-    } else { tip = Math.round(valor*0.20);
+    } else { tip = valor*0.20;
     return tip;
     }
 }
@@ -15,7 +15,7 @@ let calcularGorjeta = function (valor) {
 let calcularMedia = function (arr) {
     let soma = 0
     for (let i = 0; i < arr.length; i++) {
-        soma = soma + arr[1];
+        soma += arr[i];
         console.log(soma);
     }
     const media = soma / arr.length;
