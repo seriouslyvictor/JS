@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Window</title>
+    <style>
+        body {
+            background-color: #08AEEA;
+            background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+            height: 100vh;
+        }
+
+        .btnmodal {
+            width: 160px;
+            height: 40px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+        }
+        header {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .escondido {
+            display: none;
+        }
+
+        .modal {
+            width: 400px;
+            text-align: justify;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 25px;
+            padding: 5px 15px;
+            z-index: 10;
+        }
+
+        .modal h1{
+        text-align: center;
+        }
+
+        .fechar-modal {
+            font-size: 1.4rem;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            border: 0px;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.219);
+            backdrop-filter: blur(5px);
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 9;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    <input type="button" class="btnmodal" value="Item 1"> <input type="button" class="btnmodal" value="Item 2"> <input type="button" class="btnmodal" value="Item 3">
+    </header>
+
+    <div class="modal escondido">
+        <button class="fechar-modal">X</button>
+    <h1>Sou um Modal</h1>
+    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde quaerat, cupiditate architecto ut adipisci laborum autem animi repellat atque iusto eaque debitis, ad nemo deleniti minima provident nostrum vitae dolores?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit saepe eveniet repellendus amet ullam iure a distinctio accusamus nostrum? Perspiciatis velit laboriosam repudiandae odit sit obcaecati! Vitae repellat rerum sint?Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque rem culpa voluptatibus cum, corrupti enim, necessitatibus dicta alias dolores corporis soluta ratione aut, odio ipsam laudantium qui? Ducimus, ut inventore!
+    </p>
+    </div>
+    <div class="overlay escondido"></div>
+</body>
+<script src="modal.js"></script>
+</html>
