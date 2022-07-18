@@ -4,6 +4,10 @@ let numeroSecreto = Math.trunc(Math.random()*20)+1;
 let score = 20;
 let highScore = 0
 console.log(numeroSecreto)
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const ajuda = document.querySelector('.howto');
+const fechar = document.querySelector('.fechar-modal')
 
 function verificarAcerto() {
     let numero = Number(document.querySelector('.tentativa').value)
@@ -43,6 +47,21 @@ function resetaJogo() {
 
 }
 
+function abrirModal() {
+    modal.classList.toggle('escondido');
+    overlay.classList.toggle('escondido');
+}
+
 document.querySelector('.checar').addEventListener('click', verificarAcerto)
+fechar.addEventListener('click', abrirModal)
+overlay.addEventListener('click', abrirModal)
+document.querySelector('.howto').addEventListener('click', abrirModal)
 document.querySelector('.reset').addEventListener('click', resetaJogo)
+document.addEventListener('keydown', function(event) {
+    console.log(event);
+    if (event.key === 'Escape') {
+        abrirModal();
+    }
+})
+
 

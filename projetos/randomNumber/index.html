@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Referência: Advinhe o Número!</title>
     <link rel="stylesheet" href="style.css">
-   
+    <script src="https://kit.fontawesome.com/bcf72d1d5f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header><input type="button" class="btn reset" value="Reset"> <p>Números entre 1 e 20</p></header>
+    <header><input type="button" class="btn reset" value="Reset"> <p class="howto">Como jogar?</p></header>
     <main>
         <section class="intro">
             <h1>Advinhe o número!</h1>
@@ -27,6 +27,20 @@
     </main>
     <footer><p>Jogo criado para fins didáticos, baseado no design de Jonas Schmedtmann</p></footer>
 
+    <div class="modal escondido">
+        <h1 class="welcome grad-text">Bem vindo ao nosso jogo! </h1>
+        <i class="fa-solid fa-xmark fechar-modal grad-text2"></i>
+        <ul>
+            <li>O objetivo é tentar advinhar o número secreto com o mínimo de tentativas</li>
+            <li>O número está entre 1 e 20</li>
+            <li>Você perde 1 ponto a cada tentativa</li>
+            <li>Se os pontos chegarem a 0... <span class="grad-text2">GAME OVER</span>.</li>
+            <li>Para reiniciar a pontuação, aperte no botão Reset!</li>
+            
+        </ul>
+
+    </div>
+    <div class="overlay escondido"></div>
 
 </body>
 <script defer src="number.js"></script>
