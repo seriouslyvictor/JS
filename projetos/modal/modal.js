@@ -10,6 +10,7 @@ function abrirModal() {
     overlay.classList.remove('escondido')
 }
 
+
 function fecharModal() {
     modal.classList.add('escondido')
     overlay.classList.add('escondido')
